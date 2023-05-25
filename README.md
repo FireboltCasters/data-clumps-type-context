@@ -6,7 +6,6 @@
 
 A reporting format for Data-Clumps as used in [data-clumps](https://github.com/FireboltCasters/data-clumps/).
 
-
 ## License
 
 MIT
