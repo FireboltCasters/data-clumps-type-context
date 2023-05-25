@@ -87,15 +87,47 @@ export type DataClumpTypeContext = {
 }
 
 /**
- * This type encapsulates the context of multiple data clumps.
+ * This type holds the configuration options for a specific detector during data clump analysis.
+ */
+export type DataClumpsDetectorContext = {
+    // The name of the detector used in the analysis
+    name: string,
+
+    // The version of the detector used in the analysis
+    version: string,
+
+    // The threshold value or metric that defines a data clump for the detector
+    options: any,
+}
+
+/**
+ * This type encapsulates the context of multiple data clumps. It includes the report's version,
+ * the options used during the data clump analysis, and a dictionary mapping keys to data clump contexts.
  */
 export type DataClumpsTypeContext = {
     // The version of the context format or the tooling.
-    version: string;
+    report_version: string,
 
     // The options used during the data clump analysis.
-    options: any;
+    detector: DataClumpsDetectorContext,
 
     // A dictionary mapping keys to data clump contexts.
-    data_clumps: Dictionary<DataClumpTypeContext>;
+    data_clumps: Dictionary<DataClumpTypeContext>,
+
+    // The timestamp when the report was generated
+    report_timestamp: string,
+
+    // The language or framework the detector is designed for
+    target_language: string
+
+    // An overall summary of the report, it could contain a general overview, high risk files or any other relevant summary data
+    report_summary: any,
+
+    // Information about the project or codebase where the data clumps are detected
+    project_info: {
+        project_name: string,
+        project_version: string | null,
+        project_commit: string | null,
+        additional: any,
+    }
 }
