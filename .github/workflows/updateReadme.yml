@@ -1,0 +1,33 @@
+name: ReadmeUpdate
+# Only trigger, when the build workflow succeeded
+on:
+  workflow_run:
+    workflows: ["Publish"]
+    types:
+      - completed
+permissions:
+  contents: write
+jobs:
+  update_readme:
+    if: ${{!startsWith(github.event.head_commit.message, '[RELEASE]') || !startsWith(github.event.head_commit.message, '[README]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Install dependencies
+        run: |
+          npm install --save-dev embedme
+      - name: Update README
+        run: |
+          npx embedme README.md
+      - name: Commit and push if it was changed
+        run: |
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "[README] Updated README"
+          git push
