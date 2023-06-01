@@ -1,14 +1,15 @@
 name: Publish
 on:
-  workflow_run:
-    workflows: ["ReadmeUpdate"]
-    types:
-      - completed
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 permissions:
   contents: write
 jobs:
   npm:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}  # Add this condition
+    if: ${{!startsWith(github.event.head_commit.message, '[RELEASE]') || !startsWith(github.event.head_commit.message, '[README]') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
