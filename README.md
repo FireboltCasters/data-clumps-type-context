@@ -6,12 +6,29 @@
 
 A reporting format for Data-Clumps as used in [data-clumps](https://github.com/FireboltCasters/data-clumps/).
 
+
+```ts
+// src/api/src/ignoreCoverage/DataClumpsTypeContext.ts
+```
+
+```ts
+// src/api/src/ignoreCoverage/DataClumpsDetectorContext.ts
+```
+
+```ts
+// src/api/src/ignoreCoverage/DataClumpTypeContext.ts
+```
+
+```ts
+// src/api/src/ignoreCoverage/DataClumpsVariableFromContext.ts
+```
+
+```ts
+// src/api/src/ignoreCoverage/DataClumpsVariableToContext.ts
+```
+
 ```ts
 // src/api/src/ignoreCoverage/Dictionary.ts
-
-export interface Dictionary<T> {
-    [Key: string]: T;
-}
 ```
 
 ## License
