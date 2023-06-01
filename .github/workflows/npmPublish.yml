@@ -17,17 +17,11 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - name: Install dependencies
-          run: |
-            npm install --save-dev embedme
-      - name: Update README
-        run: |
-          npx embedme README.md
-      - name: Commit Readme Change
-        run: |
-          git config --global user.name 'Firebolt Casters'
-          git config --global user.email 'nilsbaumgartner@live.de'
-          git add -A
+      - run: npm install --save-dev embedme
+      - run: npx embedme README.md
+      - run: git config --global user.name 'Firebolt Casters'
+      - run: git config --global user.email 'nilsbaumgartner@live.de'
+      - run: git add -A
       - run: cd ./src/api/ && npm ci
       - run: cd ./src/api/ && git config --global user.name 'Firebolt Casters'
       - run: cd ./src/api/ && git config --global user.email 'nilsbaumgartner@live.de'
