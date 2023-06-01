@@ -1,6 +1,6 @@
 {
   "name": "data-clumps-type-context",
-  "version": "0.1.91",
+  "version": "0.1.92",
   "description": "This is a package to identify data-clumps-type-context",
   "main": "index.js",
   "types": "index.d.ts",
