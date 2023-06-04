@@ -26,7 +26,7 @@ export type DataClumpsTypeContext = {
 
     // Information about the project or codebase where the data clumps are detected
     project_info: {
-        project_name: string,
+        project_name: string | null,
         project_version: string | null,
         project_commit: string | null,
         additional: any,
