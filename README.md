@@ -170,6 +170,10 @@ export type DataClumpsVariableToContext = {
 ```
 
 ```ts
+// src/api/src/ignoreCoverage/Position.ts
+```
+
+```ts
 // src/api/src/ignoreCoverage/Dictionary.ts
 
 export interface Dictionary<T> {

@@ -1,3 +1,5 @@
+import {Position} from "../index";
+
 /**
  * This type represents a parameter in the destination context matching a data clump.
  */
@@ -10,6 +12,8 @@ export type DataClumpsVariableToContext = {
 
     // The data type of the parameter.
     type: string;
+
+    position: Position;
 
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;

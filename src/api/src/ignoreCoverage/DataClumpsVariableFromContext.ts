@@ -1,7 +1,7 @@
 /**
  * This type represents a parameter from the context in which a data clump exists.
  */
-import {DataClumpsVariableToContext} from "../index";
+import {Position, DataClumpsVariableToContext} from "../index";
 
 export type DataClumpsVariableFromContext = {
     // A unique identifier for this parameter.
@@ -15,6 +15,8 @@ export type DataClumpsVariableFromContext = {
 
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;
+
+    position: Position;
 
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
