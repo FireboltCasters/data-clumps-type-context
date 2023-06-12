@@ -126,7 +126,7 @@ export type DataClumpTypeContext = {
 /**
  * This type represents a parameter from the context in which a data clump exists.
  */
-import {DataClumpsVariableToContext} from "../index";
+import {Position, DataClumpsVariableToContext} from "../index";
 
 export type DataClumpsVariableFromContext = {
     // A unique identifier for this parameter.
@@ -141,6 +141,8 @@ export type DataClumpsVariableFromContext = {
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;
 
+    position: Position;
+
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
 }
@@ -149,6 +151,8 @@ export type DataClumpsVariableFromContext = {
 
 ```ts
 // src/api/src/ignoreCoverage/DataClumpsVariableToContext.ts
+
+import {Position} from "../index";
 
 /**
  * This type represents a parameter in the destination context matching a data clump.
@@ -163,6 +167,8 @@ export type DataClumpsVariableToContext = {
     // The data type of the parameter.
     type: string;
 
+    position: Position;
+
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;
 }
@@ -171,6 +177,18 @@ export type DataClumpsVariableToContext = {
 
 ```ts
 // src/api/src/ignoreCoverage/Position.ts
+
+/**
+ * This type represents a position in a source code
+ */
+
+export type Position = {
+    startLine: number;
+    startColumn: number;
+    endLine: number;
+    endColumn: number;
+}
+
 ```
 
 ```ts
