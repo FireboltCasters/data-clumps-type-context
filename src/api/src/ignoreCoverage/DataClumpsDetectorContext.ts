@@ -4,6 +4,7 @@
 export type DataClumpsDetectorContext = {
     // The name of the detector used in the analysis
     name: string,
+    url: string | null,
 
     // The version of the detector used in the analysis
     version: string,
