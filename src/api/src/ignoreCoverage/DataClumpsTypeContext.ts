@@ -28,7 +28,8 @@ export type DataClumpsTypeContext = {
     project_info: {
         project_name: string | null,
         project_version: string | null,
-        project_commit: string | null,
+        project_commit_hash: string | null,
+        project_tag: string | null,
         project_commit_date: string | null,
         additional: any,
     }
