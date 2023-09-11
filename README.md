@@ -41,6 +41,7 @@ export type DataClumpsTypeContext = {
         project_name: string | null,
         project_version: string | null,
         project_commit: string | null,
+        project_commit_date: string | null,
         additional: any,
     }
 }
@@ -56,6 +57,7 @@ export type DataClumpsTypeContext = {
 export type DataClumpsDetectorContext = {
     // The name of the detector used in the analysis
     name: string,
+    url: string | null,
 
     // The version of the detector used in the analysis
     version: string,
