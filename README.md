@@ -117,6 +117,9 @@ export type DataClumpTypeContext = {
     // The specific type of data clump: 'parameter_data_clump' or 'field_data_clump'.
     data_clump_type: string;
 
+    // Information about specific information like propability, risk, etc.
+    data_clump_type_additional?: any;
+
     // A dictionary mapping keys to data clumps parameter from context.
     data_clump_data: Dictionary<DataClumpsVariableFromContext>
 }
