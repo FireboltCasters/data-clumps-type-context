@@ -18,6 +18,8 @@ export type DataClumpsVariableFromContext = {
 
     position: Position;
 
+    probability: number | null;
+
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
 }
