@@ -85,6 +85,8 @@ export type DataClumpTypeContext = {
     // A unique identifier typically composed of the file path, class name, method name, and parameter names.
     key: string;
 
+    probability: number | null;
+
     // The file path from where the data clump originates.
     from_file_path: string;
 
@@ -149,6 +151,8 @@ export type DataClumpsVariableFromContext = {
     modifiers: string[] | undefined;
 
     position: Position;
+
+    probability: number | null;
 
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
