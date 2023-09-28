@@ -25,6 +25,7 @@ export type DataClumpsTypeContext = {
     report_summary: {
         amount_data_clumps: number | null,
         amount_files_with_data_clumps: number | null,
+        amount_classes_or_interfaces_with_data_clumps: number | null,
         amount_methods_with_data_clumps: number | null,
         fields_to_fields_data_clump: number | null,
         parameters_to_fields_data_clump: number | null,
