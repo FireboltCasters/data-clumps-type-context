@@ -34,7 +34,15 @@ export type DataClumpsTypeContext = {
     target_language: string
 
     // An overall summary of the report, it could contain a general overview, high risk files or any other relevant summary data
-    report_summary: any,
+    report_summary: {
+        amount_data_clumps: number | null,
+        amount_files_with_data_clumps: number | null,
+        amount_methods_with_data_clumps: number | null,
+        fields_to_fields_data_clump: number | null,
+        parameters_to_fields_data_clump: number | null,
+        parameters_to_parameters_data_clump: number | null,
+        additional: any,
+    }
 
     // Information about the project or codebase where the data clumps are detected
     project_info: {
@@ -44,6 +52,11 @@ export type DataClumpsTypeContext = {
         project_commit_hash: string | null,
         project_tag: string | null,
         project_commit_date: string | null,
+        number_of_files: number | null,
+        number_of_classes_or_interfaces: number | null,
+        number_of_methods: number | null,
+        number_of_data_fields: number | null,
+        number_of_method_parameters: number | null,
         additional: any,
     }
 }
