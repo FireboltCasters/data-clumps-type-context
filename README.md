@@ -168,6 +168,8 @@ export type DataClumpsVariableFromContext = {
 
     probability: number | null;
 
+    inheritedFromClassOrInterfaceKey: string | null;
+
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
 }
@@ -193,6 +195,8 @@ export type DataClumpsVariableToContext = {
     type: string;
 
     position: Position;
+
+    inheritedFromClassOrInterfaceKey: string | null;
 
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;
