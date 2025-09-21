@@ -20,6 +20,8 @@ export type DataClumpsVariableFromContext = {
 
     probability: number | null;
 
+    inheritedFromClassOrInterfaceKey: string | null;
+
     // Representation of the matching parameter in the destination context.
     to_variable: DataClumpsVariableToContext;
 }
