@@ -15,6 +15,8 @@ export type DataClumpsVariableToContext = {
 
     position: Position;
 
+    inheritedFromClassOrInterfaceKey: string | null;
+
     // Modifiers applied to the parameter, e.g., 'public', 'private', 'readonly', etc.
     modifiers: string[] | undefined;
 }
