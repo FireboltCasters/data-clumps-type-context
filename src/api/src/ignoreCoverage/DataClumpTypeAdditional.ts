@@ -6,4 +6,6 @@ export type DataClumpTypeAdditional = {
     cluster_id?: number;
     /** The type of the cluster this data clump belongs to. */
     cluster_type?: number;
+    /** Additional arbitrary fields. */
+    [key: string]: any;
 }
