@@ -5,6 +5,7 @@ import {DataClumpsVariableToContext as DataClumpsVariableToContext_}   from "./i
 import {DataClumpsVariableFromContext as DataClumpsVariableFromContext_} from "./ignoreCoverage/DataClumpsVariableFromContext";
 import {Position as Position_} from "./ignoreCoverage/Position";
 import {Dictionary as Dictionary_} from "./ignoreCoverage/Dictionary";
+import {DataClumpTypeAdditional as DataClumpTypeAdditional_} from "./ignoreCoverage/DataClumpTypeAdditional";
 
 export type Position = Position_; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
 export type DataClumpsTypeContext = DataClumpsTypeContext_; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
@@ -12,3 +13,4 @@ export type DataClumpTypeContext = DataClumpTypeContext_; // https://stackoverfl
 export type DataClumpsVariableToContext = DataClumpsVariableToContext_; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
 export type DataClumpsVariableFromContext = DataClumpsVariableFromContext_; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
 export type Dictionary<T> = Dictionary_<T>; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
+export type DataClumpTypeAdditional = DataClumpTypeAdditional_; // https://stackoverflow.com/questions/53728230/cannot-re-export-a-type-when-using-the-isolatedmodules-with-ts-3-2-2
