@@ -2,6 +2,7 @@
  * This type represents the context in which a data clump exists.
  */
 import {DataClumpsVariableFromContext, Dictionary} from "../index";
+import {DataClumpTypeAdditional} from "./DataClumpTypeAdditional";
 
 export type DataClumpTypeContext = {
     // The type of the context, in this case always 'data_clump'.
@@ -46,7 +47,7 @@ export type DataClumpTypeContext = {
     data_clump_type: string;
 
     // Information about specific information like propability, risk, etc.
-    data_clump_type_additional?: any;
+    data_clump_type_additional?: DataClumpTypeAdditional;
 
     // A dictionary mapping keys to data clumps parameter from context.
     data_clump_data: Dictionary<DataClumpsVariableFromContext>
